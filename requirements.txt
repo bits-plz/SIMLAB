@@ -11,4 +11,3 @@ Flask-User==1.0.1.5
 
 #matplotlib
 matplotlib
-os-sys
