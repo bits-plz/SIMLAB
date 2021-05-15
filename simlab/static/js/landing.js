@@ -1,7 +1,5 @@
-
-import * as THREE from '../node_modules/three/build/three.module.js'
-import { OrbitControls } from '../node_modules/three/examples/jsm/controls/OrbitControls.js'
-
+import * as THREE from 'https://cdn.skypack.dev/three';
+import { OrbitControls } from 'https://cdn.skypack.dev/three/examples/jsm/controls/OrbitControls.js';
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
 
@@ -18,7 +16,7 @@ fontLoader.load(
       const textBufferGeometry = new THREE.TextBufferGeometry(
           'SIMLAB',{
               font,
-              size: 0.5, 
+              size: 1, 
               height :0.2,
               curveSegments :12,
               bevelEnabled : true,
@@ -76,7 +74,7 @@ const cube =  new THREE.Mesh(new THREE.BoxBufferGeometry(0.5, 0.5, 0.5 ,16, 16, 
 
 
 const particlesGeometry = new THREE.BufferGeometry();
-let cnt =2000
+let cnt =20000
 const positions = new Float32Array(cnt * 3);
 const colors = new Float32Array(cnt *3);
 
@@ -125,7 +123,7 @@ window.addEventListener('resize', () =>
  */
 // Base camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-camera.position.z = 3
+camera.position.z = 10
 
 
 scene.add(camera)

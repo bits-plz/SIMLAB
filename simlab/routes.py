@@ -29,10 +29,10 @@ experiments={
                                 ['aE/ae01','pn junction diode iv characterstics',common_description, 'pnJunctionHero.png']
                             ]
     },
-    'dcM1':{
-        'name'          : 'DC Machines 1',
+    'acM1':{
+        'name'          : 'AC Machines 1',
         'experiments'   :  [
-                                ['dcM1/dcm01','Torque-Slip characterstics', common_description, 'dcMachinetslhero.jpeg']
+                                ['acM1/acm01','Torque-Slip characterstics', common_description, 'dcMachinetslhero.jpeg']
                             ]
     },
     'eMes':{
@@ -287,12 +287,12 @@ def ae1():
 
 #------------------------------------------------------------------------------------------------
 # dcM1 routes
-@app.route('/dcM1')
+@app.route('/acM1')
 def dcM1():
     return render_template('experiments.html', title='DC Machines I', course= experiments['dcM1'])
 
 
-@app.route('/dcM1/dcm01')
+@app.route('/acM1/acm01')
 def dcm01():
     V = int(request.args.get("num_v_points", 200))
     f = int(request.args.get("num_f_points", 50))
