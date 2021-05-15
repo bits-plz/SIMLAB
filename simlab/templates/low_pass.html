@@ -1,5 +1,114 @@
-{% extends "layout.html" %}
-{% block content %}
+{% extends 'layoutprac.html' %}
+
+{% block headofprac %}
+{% endblock headofprac %}
+
+{% block Title %}
+<div class="container text-center"><h1>PN Junction Forward Characterstics</h1></div><br>
+{% endblock Title %}
+
+{% block labmanual %}
+<!--Scrollspy lab manual content set offset properly-->
+<div class="container border rounded my-2" data-spy="scroll" data-target="#Contentitems" data-offset="320" class="scrollspy-example" 
+style="padding-top: 10px; padding-left: 10px; padding-right: 10px; height:400px ; width: 1200px; overflow-y: scroll">
+            <div class="container" style="padding-top:60px;" id="aim">
+                <h2>Aim</h2>
+                <p>To study the operation of Wheatstone bridge and measuring the value
+                    of unknown resistance.</p>
+            </div>
+            <div class="container" style="padding-top:60px;" id="theory">
+                <h2>Theory</h2>
+                <p>
+                    <p>AC bridges are the circuits that are used for the measurement of electrical quantities such as inductance, capacitance, resistance. 
+                        Along with these an ac bridge allows us to measure storage factor, loss factor, dissipation factor etc. 
+                        AC bridges operate with only AC signal. They are also used to provide phase shifting and a feedback path to oscillator circuits.
+                    </p>
+                    <p>Bridge circuits are extensively used for measuring values of electrical components such as R, C and L. The construction of the bridges 
+                        is very simple. The bridge has four arms, one AC supply source and the balance detector. 
+                        It works on the principle that the balance ratio of the impedances will give the balance condition to the circuit which 
+                        is determined by the null detector. If the voltage difference between the two nodes of the detector is zero, then the 
+                        bridge is said to be in a balanced condition. No current flows through the detector in such a state.
+                    </p>
+                    <p>Wheatstone bridge is an AC Bridge with only purely resistive components and is used in the measurement of
+                        medium resistances. Wheatstone bridge has been in use longer than almost any electrical measuring instrument. 
+                        It is still an accurate and reliable instrument and is extensively used in industry.</p>
+                    <p>The Wheatstone bridge is an instrument for making comparison instruments and
+                        operates upon a null indication principle. This means the indication is
+                        independent of the calibration of the null indicating instrument or any of its
+                        characteristics. For this reason, very high degrees of accuracy can be
+                        achieved using Wheatstone bridge. Accuracy of 0.1% is quite common with
+                        a Wheatstone bridge as opposed to accuracies of 3% to 5% with ordinary
+                        ohmmeter for measurement of medium resistances.</p>
+                    <center>
+                        <img src="{{url_for('static', filename='w3_theory.png')}}">
+                    </center>
+                    <p>The Wheatstone bridge is also well-suited for the measurement of small changes of 
+                        a resistance and, therefore, is also suitable to measure the resistance change in a strain gauge.
+                        It is commonly known that the strain gauge transforms strain applied to it
+                        into a proportional change of resistance.</p> 
+                    <p>The basic circuit of a Wheatstone bridge consists of four resistive arms, consisting of resistances R1, R2, R3 and R4 together with a 
+                        source of emf (a battery) and a null detector (a sensitive voltmeter in our case). With one resistance (R1 = Rx) unknown, and with two variable
+                        arms (R2 and R3), we can find out the value of unknown resistance (Rx). Due to the bridge balancing equation derived below
+                        which involves four quantities, we can always find the unknown when the other three quantities are known.
+                    </p>
+                </p>
+            </div>
+            <div class="container" style="padding-top:60px;" id="formula">
+                <h2>Formula</h2>
+                <p>
+                <center>
+                    <img width="100%" src="{{url_for('static', filename='w1_theory.png')}}">
+                    <img width="100%" src="{{url_for('static', filename='w2_theory.png')}}">
+                </center>
+                </p>
+            </div>
+            <div class="container" style="padding-top:60px;" id="procedure">
+                <h2>Procedure</h2>
+                <p>
+                    <p>1) Select the value set for resistance from the dropdown menu in blue dashboard. Choose Set-1.</p>
+                    <p>2) Now, Rx is set to some unknown constant. Now, vary the values of R2 and R3 using the corresponding slider inputs
+                        until the bridge is balanced.
+                    </p>
+                    <p>3) For obtaining the balance, one needs to vary values of R2 and R3 in such a way that the detector
+                        voltage becomes less than 5 miilivolt. As soon as, detector voltage goes below 5 millivolt, a balance
+                        is obtained.
+                    </p>
+                    <p>4) In the balanced bridge condition, the calculate Rx button will become active. Click on it to find the
+                        value of Rx (system calculated, not actual value of Rx) obtained by using the parameters of the balanced bridge. 
+                        You can hide it using the Hide button beside it.
+                    </p>
+                    <p>5) Click on See Calculated Rx to see the calculated value of the unknown parameter Rx in the sidebar. Note, 
+                        that this is not an observation table. The present readings will not be stored here after you change anything in the bridge.
+                    </p>
+                    <p>6) Now, select Set-2 as the new value for Rx and redo steps 1 to 5. Note that readings of previous Rx values
+                        (from previously selected sets of Rx) will not be stored anywhere. The whole page including the sidebar 
+                        resets to default state (with no record of previous readings) when a different set for Rx value is selected.
+                    </p>
+                    <p>7) Keep verifying the results obtained by solving the bridge yourself after each cycle (steps 1 to 5).</p>
+                    <p>8) The three sets of values used are: 
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rx --> [Set-1: 60 ohm;   Set-2: 370 ohm;   Set-3: 730 ohm].
+                    </p>
+                    <p>9) Compare these values with the calculated values of Rx obtained during the experiment. If the
+                        actual values match the readings obtained (or the difference lies within error tolerance limits) 
+                        then the the results are verified.
+                    </p>
+                    <p>
+                        <br><h4>Sources:</h4>
+                    </p>
+                    <p>
+                        <a href="https://www.electrical4u.com/wheatstone-bridge-circuit-theory-and-principle/">Electrical4u</a><br>
+                        <a href="https://www.pantechsolutions.net/blog/lab-experiment-for-wheatstone-bridge-trainer-module/">Pantech Solutions</a><br>
+                        <a href="https://manualzz.com/download/11959855">Manualzz - AB10 WHEATSTONE BRIDGE (Lab manual by Scientech Technologies Pvt. Ltd.)</a><br>
+                        <a href="https://www.electricalengineeringinfo.com/2017/04/what-ac-bridges-general-equation-form-ac-bridges.html">Electricalengineeringinfo</a><br>
+                        <a href="https://www.engineersedge.com/instrumentation/wheat_stone_bridge.htm">Engineersedge</a><br>
+                        A Course In Electrical And Electronic Measurements And Instrumentation - A.K. Sawhney, Puneet Sawhney<br>
+                    </p>
+                </p>
+            </div>
+</div>
+{% endblock labmanual %}
+
+{% block dashboard %}
 
 
 <div class="container" style="width: 100vw; height: 80vh;">
@@ -23,4 +132,4 @@
 </div>
 
 
-{% endblock %}
+{% endblock dashboard%}
