@@ -7,8 +7,8 @@
                 <div class="container">
                     <h2>High pass filter with R= {{R}} ohms,C={{C}} microfarads</h2>
                     <form method=get action="/icApp/icApp02">
-                      <input name="num_r_points" type=number value="{{R}}" />
-                      <input name="num_c_points" type=number value="{{C}}" />
+                        <input name="num_r_points" type=number value="{{R}}" min="10" max="100" />
+                        <input name="num_c_points" type=number value="{{C}}" min="10" max="1000" />
                       <input type=submit value="update graph">
                     </form>
                 
