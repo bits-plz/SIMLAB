@@ -398,13 +398,13 @@ def icApp():
 
 @app.route('/icApp/icApp01')
 def lowPassFilter():
-    R = int(request.args.get("num_x_points", 50))
+    R = int(request.args.get("num_r_points", 50))
     C = int(request.args.get("num_c_points", 50))
     return render_template('low_pass.html', title="Low pass filter", R=R, C=C)
 
 @app.route('/icApp/icApp02')
 def highPassFilter():
-    R = int(request.args.get("num_x_points", 50))
+    R = int(request.args.get("num_r_points", 50))
     C = int(request.args.get("num_c_points", 50))
     return render_template('high_pass.html', title="High pass filter", R=R, C=C)
 
