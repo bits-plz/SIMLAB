@@ -289,7 +289,7 @@ def ae1():
 # dcM1 routes
 @app.route('/acM1')
 def dcM1():
-    return render_template('experiments.html', title='DC Machines I', course= experiments['acM1'])
+    return render_template('experiments.html', title='AC Machines', course= experiments['acM1'])
 
 
 @app.route('/acM1/acm01')
