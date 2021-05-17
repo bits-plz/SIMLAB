@@ -63,15 +63,26 @@ style="padding-top: 10px; padding-left: 10px; padding-right: 10px; height:400px 
         <div class="col-6">
                 <div class="container">
         
-                    <form method=get action="/icApp/icApp01">
-                      R<input name="num_r_points" type=number value="{{R}}" min="10" max="100" />
-                      C<input name="num_c_points" type=number value="{{C}}" min="10" max="1000" />
-                      <input type=submit value="update graph">
-                    </form>
+                    <img src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/filter-fil5.gif" width="100%"
+                    style="transform: translateY(30%);"
+                    >
+                        <form method=get action="/icApp/icApp02">
+                            <input name="num_r_points" type=number value="{{R}}" min="10" max="100"                          
+                                style="transform: translate(200%, -320%);"
+                            />
+                            <input name="num_c_points" type=number value="{{C}}" min="10" max="1000"                      
+                            style="transform: translate(120%, -20%);"
+                            />
+                          <button type="submit" class="btn btn-primary"
+                            style="transform: translate(-100%,200%);"
+                          >Update Graph</button>
+    
+                        </form>
                 
                     <img src="/matplot-as-image-{{R}},{{C}}.svg"
                          alt="random points as svg"
                          height="400"
+                         style="transform: translate(90%, -50%);"
                     >
                 </div>
         </div>
