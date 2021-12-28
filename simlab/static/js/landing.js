@@ -1,7 +1,7 @@
 import * as THREE from 'https://cdn.skypack.dev/three';
 import { OrbitControls } from 'https://cdn.skypack.dev/three/examples/jsm/controls/OrbitControls.js';
 import {FontLoader} from 'https://cdn.skypack.dev/three/examples/jsm/loaders/FontLoader.js';
-import {TextGeometry} from 'https://cdn.skypack.dev/examples/jsm/geometries/TextGeometry.js';
+import {TextGeometry} from 'https://cdn.skypack.dev/three/examples/jsm/geometries/TextGeometry.js';
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
 
