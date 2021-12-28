@@ -1,6 +1,7 @@
 import * as THREE from 'https://cdn.skypack.dev/three';
 import { OrbitControls } from 'https://cdn.skypack.dev/three/examples/jsm/controls/OrbitControls.js';
 import {FontLoader} from 'https://cdn.skypack.dev/three/examples/jsm/loaders/FontLoader.js';
+import {TextGeometry} from 'https://cdn.skypack.dev/examples/jsm/geometries/TextGeometry.js';
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
 
@@ -14,7 +15,7 @@ const textureLoader = new THREE.TextureLoader()
 const fontLoader= new FontLoader()
 fontLoader.load(
   '../static/fonts/helvetiker_regular.typeface.json',(font)=>{
-      const textBufferGeometry = new THREE.TextGeometry(
+      const textBufferGeometry = new TextGeometry(
           'SIMLAB',{
               font,
               size: 1, 
