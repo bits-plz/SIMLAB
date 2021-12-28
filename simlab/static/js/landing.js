@@ -14,7 +14,7 @@ const textureLoader = new THREE.TextureLoader()
 const fontLoader= new FontLoader()
 fontLoader.load(
   '../static/fonts/helvetiker_regular.typeface.json',(font)=>{
-      const textBufferGeometry = new THREE.TextBufferGeometry(
+      const textBufferGeometry = new THREE.TextGeometry(
           'SIMLAB',{
               font,
               size: 1, 
