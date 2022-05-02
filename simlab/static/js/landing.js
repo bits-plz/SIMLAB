@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from "OrbitControls";
-
+import {FontLoader} from 'FontLoader';
+import {TextGeometry} from 'TextGeometry';
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
 
@@ -11,10 +12,10 @@ const scene = new THREE.Scene()
  * Base
  */
 const textureLoader = new THREE.TextureLoader()
-const fontLoader= new THREE.FontLoader()
+const fontLoader= new FontLoader()
 fontLoader.load(
   '../static/fonts/helvetiker_regular.typeface.json',(font)=>{
-      const textBufferGeometry = new THREE.TextGeometry(
+      const textBufferGeometry = new TextGeometry(
           'SIMLAB',{
               font,
               size: 1, 
