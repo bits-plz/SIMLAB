@@ -14,7 +14,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     
  
-    
+     <script type="importmap">
+      {
+          "imports": {
+              "three": "https://unpkg.com/three@0.138.0/build/three.module.js",
+              "OrbitControls": "https://unpkg.com/three@0.138.0/examples/jsm/controls/OrbitControls.js",
+              "FontLoader" : "https://unpkg.com/three@0.138.0/examples/jsm/loaders/FontLoader.js",
+              "TextGeometry" : "https://unpkg.com/three@0.138.0/examples/jsm/geometries/TextGeometry.js"
+          }
+      }
+    </script>   
     
     
 
@@ -69,14 +78,7 @@
     <script src="https://cdn.rawgit.com/bradley/Blotter/3007fe6e/build/materials/fliesMaterial.js"></script>
     <script src="https://cdn.rawgit.com/bradley/Blotter/3007fe6e/build/materials/channelSplitMaterial.js"></script>
     <script src="https://cdn.rawgit.com/bradley/Blotter/3007fe6e/build/materials/rollingDistortMaterial.js"></script>
-        <script type="importmap">
-      {
-          "imports": {
-              "three": "https://cdn.skypack.dev/three@0.137.5",
-              "OrbitControls": "https://cdn.skypack.dev/three@0.132.2/examples/jsm/controls/OrbitControls.js",
-          }
-      }
-  </script>
+       
     
     <script type="module" src="{{url_for('static', filename='js/landing.js') }}"></script>
 
