@@ -3,7 +3,7 @@
     "builds": [
         {
             "src": "*.py",
-            "use": "@moh"
+            "use": "@ltr/flask"
         }
     ],
     "routes": [
